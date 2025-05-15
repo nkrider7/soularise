@@ -4,7 +4,9 @@ import { cn } from "@/lib/utils";
 import { motion, MotionProps, useScroll, useSpring } from "motion/react";
 import React from "react";
 
-interface ScrollProgressProps extends Omit<React.HTMLAttributes<HTMLElement>, keyof MotionProps> {}
+interface ScrollProgressProps extends Omit<React.HTMLAttributes<HTMLElement>, keyof MotionProps> {
+  defaultProp?: string;
+}
 
 export const ScrollProgress = React.forwardRef<
   HTMLDivElement,

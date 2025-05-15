@@ -9,7 +9,7 @@ import HeroSection from "@/components/Landing/HeroZero";
 import { MarqueeDemo } from "@/components/Landing/Marque";
 import ScrollVelocity from "@/components/magicui/markeuptext";
 import { HoverImageLinks } from "@/components/services";
-import { MacbookScroll } from "@/components/ui/macbook-scroll";
+// import { MacbookScroll } from "@/components/ui/macbook-scroll";
 import dynamic from 'next/dynamic'
 
 
@@ -44,6 +44,7 @@ export default function Home() {
           showGradient={true}
         />
       </div> */}
+      <Footer />
       <Footer />
     </div>
   );

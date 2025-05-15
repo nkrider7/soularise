@@ -10,7 +10,7 @@ export default function Hero() {
 	return (
 		<div
 			style={{
-				background: "url('/space.webp')",
+				// background: "url('/space.webp')",
 				backgroundPosition: "center",
 				backgroundSize: "cover",
 				backgroundRepeat: "no-repeat",
