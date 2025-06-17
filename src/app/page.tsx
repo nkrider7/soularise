@@ -2,7 +2,7 @@
 // import FloatBar from "@/components/FloatNav";
 import Footer from "@/components/Footer";
 import Best from "@/components/Landing/Best";
-import BlackBox from "@/components/Landing/BlackBox";
+import DreamPricing from "@/components/Landing/DreamPricing";
 import Expand from "@/components/Landing/Expand";
 // import Hero from "@/components/Landing/Hero";
 import HeroSection from "@/components/Landing/HeroZero";
@@ -33,7 +33,7 @@ export default function Home() {
             className="font-guzan text-4xl md:text-7xl "
           />
         </div>
-        <BlackBox />
+        <DreamPricing />
       </section>
       <HeroSection />
       <HoverImageLinks />
@@ -44,7 +44,7 @@ export default function Home() {
           showGradient={true}
         />
       </div> */}
-      <Footer />
+
       <Footer />
     </div>
   );

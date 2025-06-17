@@ -34,8 +34,7 @@ export default function Best() {
               backgroundPosition: "center",
               borderRadius: "10px",
             }}
-            className=" rounded-xl  h-full"></div>,
-            
+            className=" rounded-xl  h-full"></div>,            
           ]}
         /></div>
     </div>
