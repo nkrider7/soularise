@@ -9,6 +9,7 @@ import HeroSection from "@/components/Landing/HeroZero";
 import { MarqueeDemo } from "@/components/Landing/Marque";
 import ScrollVelocity from "@/components/magicui/markeuptext";
 import { HoverImageLinks } from "@/components/services";
+import { EmailTemp } from "@/lib/waitlist";
 // import { MacbookScroll } from "@/components/ui/macbook-scroll";
 import dynamic from 'next/dynamic'
 
@@ -22,9 +23,14 @@ export default function Home() {
         <FloatBar />
       </div> */}
       <Hero />
-      <MarqueeDemo />
+      {/* <MarqueeDemo /> */}
+
+        <div className="h-screen">
+          <EmailTemp email="narendranishad@gmail.com" />
+        </div>
+
       <Expand />
-      <section>
+      {/* <section>
         <div className="mt-10">
           <ScrollVelocity
             texts={["UI/UX Design * Web Development *  App Development * E-commerce * CMS *  SaaS Solutions","Digital Marketing * SEO * Social Media *  Branding *  Content Marketing"
@@ -33,11 +39,11 @@ export default function Home() {
             className="font-guzan text-4xl md:text-7xl "
           />
         </div>
-        <DreamPricing />
-      </section>
-      <HeroSection />
-      <HoverImageLinks />
-      <Best />
+      </section> */}
+        {/* <DreamPricing /> */}
+      {/* <HeroSection /> */}
+      {/* <HoverImageLinks /> */}
+      {/* <Best /> */}
       {/* <div className=' h-[170vh] md:h-[400vh] ' >
         <MacbookScroll
           src={`/win.webp`}

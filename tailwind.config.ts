@@ -66,6 +66,8 @@ export default {
         sink: ["var(--font-sink)", "system-ui", "sans-serif"],
         guzan: ["var(--font-guzan)", "system-ui", "sans-serif"],
         inter: ["var(--font-inter-sans)", "system-ui", "sans-serif"],
+        feather: ["var(--font-feather)", "system-ui", "sans-serif"],
+        Bold: ["var(--font-boldy)", "system-ui", "sans-serif"],
       },
       keyframes: {
         shine: {

@@ -30,6 +30,35 @@ const guzan = localFont({
   variable: '--font-guzan',
 })
 
+
+const feather = localFont({
+  src: [
+    {
+      path: '../../public/fonts/FeatherBold.ttf',
+      weight: '400'
+    },
+    {
+      path: '../../public/fonts/FeatherBold.ttf',
+      weight: '700'
+    }
+  ],
+  variable: '--font-feather',
+})
+
+const Boldy = localFont({
+  src: [
+    {
+      path: '../../public/fonts/Bold.ttf',
+      weight: '400'
+    },
+    {
+      path: '../../public/fonts/Bold.ttf',
+      weight: '700'
+    }
+  ],
+  variable: '--font-boldy',
+})
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -57,7 +86,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${sink.variable} ${guzan.variable} ${inter.variable} antialiased`}>
+        className={`${geistSans.variable} ${geistMono.variable} ${Boldy.variable} ${sink.variable} ${feather.variable} ${guzan.variable} ${inter.variable} antialiased`}>
         {children}
       </body>
     </html>

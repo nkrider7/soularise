@@ -19,7 +19,7 @@ export default function Hero() {
 				backgroundRepeat: "no-repeat",
 				backgroundAttachment: 'scroll'
 			}}
-			className='h-[80vh] bg-black  flex flex-col bg-no-repeat bg-contain  justify-between items-center'>
+			className='h-[80vh] bg-[#0C0924]  flex flex-col bg-no-repeat bg-contain  justify-between items-center'>
 
 
 			<div className='w-full flex justify-evenly'>
@@ -45,11 +45,22 @@ export default function Hero() {
 			> */}
 				<div className='z-30'>
 					
-					<h1 className=' hidden  text-6xl mt-2 md:text-9xl font-guzan md:flex  items-center text-accent'>Br
-						<Image src='/infinity.png' className='mr-1' width={180} height={180} alt='infi' />
-						Code</h1>
-					<Image src='/logo.svg' className='md:hidden flex mx-auto' width={290} height={290} alt='logo' />
-					<h1 className='text-white text-center font-guzan text-2xl md:text-4xl'>We Are Digital Agency</h1>
+					{/* <h1 style={{
+						WebkitTextStroke: "6px white",
+						WebkitTextStrokeWidth: "1px",
+						
+					}} className=' hidden  text-6xl mt-2  leading-none md:text-9xl font-feather md:flex   items-center text-accent'>S
+						<Image src='https://media.tenor.com/7hmeeTqdS0IAAAAM/purple-fire.gif' className='mr-1 object-cover object-bottom' width={180} height={180} alt='infi' />
+						UL </h1>
+						<h1 style={{
+						WebkitTextStroke: "6px white",
+						WebkitTextStrokeWidth: "1px",
+						lineHeight: "0.7",
+						letterSpacing: "-4px",
+						
+					}} className=' hidden  text-6xl leading-none md:text-9xl font-feather md:flex   items-center text-accent'>ARISE</h1> */}
+					<Image src='/lv3.png' className=' flex mx-auto h-96 w-96' width={500} height={500} alt='logo' />
+					{/* <h1 className='text-white text-center font-guzan text-2xl md:text-4xl'>We Are Digital Agency</h1> */}
 				</div>
 			{/* </AnimatedContent> */}
 			{/* <Astro /> */}
@@ -58,13 +69,13 @@ export default function Hero() {
 				
 			</div>
 			<div className='absolute w-full h-[80vh] z-0'>
-				<Silk
+				{/* <Silk
 					speed={5}
 					scale={1}
-					color="#121212"
+					color="#ffffff"
 					noiseIntensity={1.5}
 					rotation={0}
-				/>
+				/> */}
 			</div>
 		</div>
 	)
