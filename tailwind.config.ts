@@ -17,7 +17,7 @@ export default {
         foreground: "hsl(var(--foreground))",
         myblack: "#121212",
         myYellow: "#FAE800",
-        accentColor: "#A2F23E",
+        accentColor: "#8664C6",
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",

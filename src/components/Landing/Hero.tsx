@@ -1,3 +1,5 @@
+"use client"
+import { motion, useMotionValue, useTransform } from 'framer-motion';
 import React from 'react'
 import { Lightbulb } from 'lucide-react';
 // import Astro from '../svg/Astro';
@@ -5,6 +7,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import Silk from './SlikBg';
+import { WaitlistSignup } from '../WaitlistSignup';
 
 
 export default function Hero() {
@@ -22,27 +25,16 @@ export default function Hero() {
 			className='h-[80vh] bg-[#0C0924]  flex flex-col bg-no-repeat bg-contain  justify-between items-center'>
 
 
-			<div className='w-full flex justify-evenly'>
-				<div></div>
+			<div className='w-full flex justify-end max-w-5xl pr-4'>
+				
 				<div className='mt-10 flex z-30'>
-					<Link href={'/blogs'} className='text-xs p-2 px-3 font-semibold font-inter   bg-myblack text-white flex  gap-x-2 hover:text-accentColor items-center rounded-full '> Blogs</Link>
-					<button className='text-xs p-2 px-3 font-semibold font-inter border-2 border-accentColor  bg-myblack text-accentColor flex  gap-x-2 items-center rounded-full '>  Get in Touch <Lightbulb size={18} /></button>
+					
+					<button className='text-xs p-2 px-3  border-2 border-accentColor  bg- text-accentColor flex  gap-x-2 items-center rounded-full '>  <span className='font-feather '>App Coming Soon! </span><Lightbulb size={18} strokeWidth={3} /></button>
 				</div>
 			</div>
 
 
-			{/* <AnimatedContent
-				distance={150}
-				direction="horizontal"
-				reverse={false}
-				duration={2000}
-				ease="bounce.out"
-				initialOpacity={0.2}
-				animateOpacity
-				scale={1.1}
-				threshold={0.2}
-				delay={0.3}
-			> */}
+			
 				<div className='z-30'>
 					
 					{/* <h1 style={{
@@ -59,8 +51,13 @@ export default function Hero() {
 						letterSpacing: "-4px",
 						
 					}} className=' hidden  text-6xl leading-none md:text-9xl font-feather md:flex   items-center text-accent'>ARISE</h1> */}
-					<Image src='/lv3.png' className=' flex mx-auto h-96 w-96' width={500} height={500} alt='logo' />
+					{/* <Image src='/logo.png' className=' flex mx-auto h-96 w-96' width={1200} height={1200} alt='logo' /> */}
+
+					<TiltImage />
 					{/* <h1 className='text-white text-center font-guzan text-2xl md:text-4xl'>We Are Digital Agency</h1> */}
+
+					 <WaitlistSignup />
+
 				</div>
 			{/* </AnimatedContent> */}
 			{/* <Astro /> */}
@@ -69,15 +66,68 @@ export default function Hero() {
 				
 			</div>
 			<div className='absolute w-full h-[80vh] z-0'>
-				{/* <Silk
+				<Silk
 					speed={5}
 					scale={1}
-					color="#ffffff"
+					color="#0C0924"
 					noiseIntensity={1.5}
 					rotation={0}
-				/> */}
+				/>
 			</div>
 		</div>
 	)
 }
+
+
+
+
+
+
+const TiltImage = () => {
+  const rotateX = useMotionValue(0);
+  const rotateY = useMotionValue(0);
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    const { left, top, width, height } = e.currentTarget.getBoundingClientRect();
+    const x = e.clientX - left;
+    const y = e.clientY - top;
+
+    const rotateMax = 15;
+
+    const yRotation = ((x / width) - 0.5) * 2 * rotateMax;
+    const xRotation = ((y / height) - 0.5) * -2 * rotateMax;
+
+    rotateX.set(xRotation);
+    rotateY.set(yRotation);
+  };
+
+  const handleMouseLeave = () => {
+    rotateX.set(0);
+    rotateY.set(0);
+  };
+
+  return (
+    <motion.div
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      style={{
+        rotateX,
+        rotateY,
+        perspective: 1000,
+      }}
+      className="w-96 h-96 mx-auto flex items-center justify-center"
+    >
+      <Image
+        src="/logo.png"
+        alt="logo"
+        width={1200}
+        height={1200}
+        className="w-full h-full object-contain"
+      />
+    </motion.div>
+  );
+};
+
+
+
 

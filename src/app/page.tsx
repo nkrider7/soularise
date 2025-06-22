@@ -8,8 +8,8 @@ import Expand from "@/components/Landing/Expand";
 import HeroSection from "@/components/Landing/HeroZero";
 import { MarqueeDemo } from "@/components/Landing/Marque";
 import ScrollVelocity from "@/components/magicui/markeuptext";
-import { HoverImageLinks } from "@/components/services";
-import { EmailTemp } from "@/lib/waitlist";
+// import { HoverImageLinks } from "@/components/services";
+// import { EmailTemp } from "@/lib/waitlist";
 // import { MacbookScroll } from "@/components/ui/macbook-scroll";
 import dynamic from 'next/dynamic'
 
@@ -25,8 +25,8 @@ export default function Home() {
       <Hero />
       {/* <MarqueeDemo /> */}
 
-        <div className="h-screen">
-          <EmailTemp email="narendranishad@gmail.com" />
+        <div className="h-fit">
+         
         </div>
 
       <Expand />
