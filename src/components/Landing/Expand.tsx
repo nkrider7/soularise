@@ -1,11 +1,10 @@
-"use client"
+"use client";
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Expand() {
   const [expanded, setExpanded] = useState("strategy");
 
-  // Data for sections
   const sections = [
     {
       id: "strategy",
@@ -28,43 +27,44 @@ export default function Expand() {
   ];
 
   return (
-	<div className="w-full p-10 bg-zinc-200"> 
-    <div style={{ maxWidth: "1200px", margin: "auto" }} >
-      {sections.map((section) => (
-        <motion.div
-          key={section.id}
-          initial={{ height: "60px" }}
-          animate={{
-            height: expanded === section.id ? "auto" : "60px",
-          }}
-          transition={{ duration: 0.5, ease: "easeInOut" }}
-          style={{
-            overflow: "hidden",
-            background: expanded === section.id ? "white" : "#111",
-            color: expanded === section.id ? "black" : "white",
-            borderRadius: "8px",
-            marginBottom: "10px",
-            padding: expanded === section.id ? "20px" : "60px",
-            cursor: "pointer",
-          }}
-          onClick={() => setExpanded(section.id)}
-		  className="flex flex-col md:flex-row justify-between items-center "
-        >
-          <h2 className="font-guzan text-4xl  " style={{ margin: 0 }}>{section.title}</h2>
-          {expanded === section.id && (
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.3 }}
-              style={{ marginTop: "10px" }}
-			  className="md:w-[50%] font-inter font-semibold text-lg"
+    <div className="w-full p-6 bg-zinc-200">
+      <div className="max-w-6xl mx-auto space-y-4">
+        {sections.map((section) => {
+          const isOpen = expanded === section.id;
+          return (
+            <motion.div
+              key={section.id}
+              layout
+              transition={{ layout: { duration: 0.5, ease: "easeInOut" } }}
+              onClick={() => setExpanded(section.id)}
+              className={`cursor-pointer overflow-hidden rounded-xl shadow-[4px_4px_0px_#000] transition-colors duration-300 ${
+                isOpen ? "bg-white text-black" : "bg-zinc-900 text-white"
+              }`}
             >
-              {section.content}
-            </motion.p>
-          )}
-        </motion.div>
-      ))}
+              <div className="flex flex-col md:flex-row justify-between md:items-center p-6 md:p-8">
+                <h2 className="font-feather text-3xl md:text-4xl">{section.title}</h2>
+              </div>
+
+              <AnimatePresence>
+                {isOpen && (
+                  <motion.div
+                    key="content"
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: '100%' }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.4 }}
+                    className="px-6 pb-6 md:px-8 md:pb-8"
+                  >
+                    <p className="font-inter font-semibold text-lg md:w-[80%]">
+                      {section.content}
+                    </p>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.div>
+          );
+        })}
+      </div>
     </div>
-	</div>
   );
 }

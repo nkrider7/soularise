@@ -18,6 +18,7 @@ export default {
         myblack: "#121212",
         myYellow: "#FAE800",
         accentColor: "#8664C6",
+        myPink:"#FF006E",
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",

@@ -1,21 +1,21 @@
 
 // import FloatBar from "@/components/FloatNav";
 import Footer from "@/components/Footer";
-import Best from "@/components/Landing/Best";
-import DreamPricing from "@/components/Landing/DreamPricing";
+// import Best from "@/components/Landing/Best";
+// import DreamPricing from "@/components/Landing/DreamPricing";
 import Expand from "@/components/Landing/Expand";
 import HeroNeu from "@/components/Landing/HeroNeu";
 // import Hero from "@/components/Landing/Hero";
-import HeroSection from "@/components/Landing/HeroZero";
-import { MarqueeDemo } from "@/components/Landing/Marque";
-import ScrollVelocity from "@/components/magicui/markeuptext";
+// import HeroSection from "@/components/Landing/HeroZero";
+// import { MarqueeDemo } from "@/components/Landing/Marque";
+// import ScrollVelocity from "@/components/magicui/markeuptext";
 // import { HoverImageLinks } from "@/components/services";
 // import { EmailTemp } from "@/lib/waitlist";
 // import { MacbookScroll } from "@/components/ui/macbook-scroll";
-import dynamic from 'next/dynamic'
+// import dynamic from 'next/dynamic'
 
 
-const Hero = dynamic(() => import('@/components/Landing/Hero'))
+// const Hero = dynamic(() => import('@/components/Landing/Hero'))
 
 export default function Home() {
   return (
@@ -24,13 +24,12 @@ export default function Home() {
         <FloatBar />
       </div> */}
       <HeroNeu />
-      <Hero />
+      {/* <Hero /> */}
       {/* <MarqueeDemo /> */}
 
         <div className="h-fit">
-         
+       
         </div>
-
       <Expand />
       {/* <section>
         <div className="mt-10">
