@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import Best from "@/components/Landing/Best";
 import DreamPricing from "@/components/Landing/DreamPricing";
 import Expand from "@/components/Landing/Expand";
+import HeroNeu from "@/components/Landing/HeroNeu";
 // import Hero from "@/components/Landing/Hero";
 import HeroSection from "@/components/Landing/HeroZero";
 import { MarqueeDemo } from "@/components/Landing/Marque";
@@ -22,6 +23,7 @@ export default function Home() {
       {/* <div className="flex justify-center">
         <FloatBar />
       </div> */}
+      <HeroNeu />
       <Hero />
       {/* <MarqueeDemo /> */}
 
