@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import RotatingText from "../magicui/TextColor"
+// import RotatingText from "../magicui/TextColor"
 
 export default function HeroSection() {
   return (
@@ -11,7 +11,7 @@ export default function HeroSection() {
           <div className="space-y-4 ml-10">
             
             <h1 className="text-4xl font-bold tracking-tighter text-black font-guzan w-80 sm:text-5xl md:text-6xl">
-              WE ARE WAITING FOR YOUR <RotatingText
+              {/* WE ARE WAITING FOR YOUR <RotatingText
               texts={['Growth!', 'Success!', 'Vision!', 'Brand!']}
               mainClassName="px-2 sm:px-2 md:px-3 bg-accentColor text-white overflow-hidden py-0.5 sm:py-1 md:py-2  rounded-lg"
               staggerFrom={"last"}
@@ -22,7 +22,7 @@ export default function HeroSection() {
               splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
               transition={{ type: "spring", damping: 30, stiffness: 400 }}
               rotationInterval={2000}
-            />
+            /> */}
             </h1>
             <p className="text-sm font-inter w-80 text-gray-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla, voluptatibus. Optio, dolores.</p>
             <Button className="bg-white text-black hover:bg-gray-100 font-inter transition-colors" size="lg">

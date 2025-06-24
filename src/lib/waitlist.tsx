@@ -3,7 +3,6 @@ import {
   Html,
   Container,
   Text,
-  Heading,
   Section,
   Img,
   Font,
@@ -81,13 +80,13 @@ export const EmailTemp: React.FC<Readonly<EmailTempProps>> = ({ email }) => {
           >
             Welcome to the waitlist for <strong>Soul Arise</strong> – where your real-life transformation begins like a leveling-up quest!<br /><br />
 
-            You've officially taken the first step on your journey to becoming your strongest self. 💪 Whether it’s crushing fitness goals, building powerful habits, or unlocking hidden potential — Soul Arise is built to guide you like a true protagonist in your own story.<br /><br />
+            You&apos;ve officially taken the first step on your journey to becoming your strongest self. 💪 Whether it’s crushing fitness goals, building powerful habits, or unlocking hidden potential — Soul Arise is built to guide you like a true protagonist in your own story.<br /><br />
 
-            ✨ Inspired by <em>Solo Leveling</em>, we’ve turned self-growth into an epic, task-based adventure. You'll level up, unlock new challenges, and see yourself evolve — body, mind, and soul.<br /><br />
+            ✨ Inspired by <em>Solo Leveling</em>, we&apos;ve turned self-growth into an epic, task-based adventure. You&apos;ll level up, unlock new challenges, and see yourself evolve — body, mind, and soul.<br /><br />
 
-            While we’re gearing up to launch, here’s what’s next:
+            While we&apos;re gearing up to launch, here’s what&apos;s next:
             <ul style={{ textAlign: "left", margin: "16px auto", maxWidth: "480px", padding: "0 16px", color: "#4B5563" }}>
-              <li>💌 You’ll be the first to get early access</li>
+              <li>💌 You&apos;ll be the first to get early access</li>
               <li>🔐 Exclusive perks for waitlisters</li>
               <li>🎁 Secret bonuses... just for staying with us</li>
             </ul>
